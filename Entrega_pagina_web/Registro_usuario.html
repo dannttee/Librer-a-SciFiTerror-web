@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registrar usuario | Librería SciFiTerror</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <div class="barra-superior">
+      <div class="logo">
+        <img src="logotienda.png" alt="Logo de la tienda Librería SciFiTerror" />
+        <span>Librería SciFiTerror</span>
+      </div>
+      <nav>
+        <a href="Index.html" title="Inicio">Home</a>
+        <a href="Productos.html" title="Catálogo de productos">Productos</a>
+        <a href="Nosotros.html" title="Acerca de nosotros">Nosotros</a>
+        <a href="Blogs.html" title="Blogs">Blogs</a>
+        <a href="Contacto.html" title="Contacto">Contacto</a>
+      </nav>
+        <div class="carrito" aria-label="Carrito de compras" role="region" tabindex="0">
+          <a href="Carrito.html" class="carrito-link">
+            <img src="carrito.png" alt="Icono carrito" class="carrito-icon" />
+            <span class="carrito-text">Carrito</span>
+            <span class="carrito-count">(<span id="cart-count">0</span>)</span>
+          </a>
+        </div>
+    </div>
+    <div class="auth-links" aria-label="Enlaces de autenticación">
+      <a href="Iniciar_sesion.html">Iniciar sesión</a> | <a href="Registro_usuario.html">Registrar usuario</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="form-contenedor">
+      <div style="text-align:center; margin-bottom: 1.8rem;">
+        <img src="logotienda.png" alt="Logo Librería SciFiTerror" style="width:250px; height:auto; margin-bottom:0.5rem;" />
+        <div style="font-weight:700; font-size:1.4rem; color:#112d4e;">Librería SciFiTerror</div>
+      </div>
+
+      <div class="form-titulo">Registro de usuario</div>
+      <form id="registroForm" novalidate>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Su nombre completo" required />
+        <div id="nombreError" class="error-msg">El nombre completo es obligatorio.</div>
+
+        <label for="correo1">Correo electrónico</label>
+        <input type="email" id="correo1" name="correo1" placeholder="ejemplo@gmail.com" required />
+        <div id="correo1Error" class="error-msg">Por favor ingresa un correo válido.</div>
+
+        <label for="correo2">Confirmar correo electrónico</label>
+        <input type="email" id="correo2" name="correo2" placeholder="Confirme su correo" required />
+        <div id="correo2Error" class="error-msg">Los correos no coinciden.</div>
+
+        <label for="password1">Contraseña</label>
+        <input type="password" id="password1" name="password1" placeholder="Ingresa una contraseña" required />
+        <div id="password1Error" class="error-msg">La contraseña es obligatoria.</div>
+
+        <label for="password2">Confirmar contraseña</label>
+        <input type="password" id="password2" name="password2" placeholder="Confirme su contraseña" required />
+        <div id="password2Error" class="error-msg">Las contraseñas no coinciden.</div>
+
+        <label for="telefono">Teléfono <span style="font-weight: 400; color: #888;">(opcional)</span></label>
+        <input type="text" id="telefono" name="telefono" placeholder="Ej: +56912345678" />
+
+        <div style="display: flex; gap: 16px; margin-top: 1.2rem; margin-bottom: 2.2rem; align-items: flex-end; flex-wrap: wrap;">
+  <div style="flex:1; min-width:180px;">
+    <label for="region" style="margin-bottom:5px;display:block;">Región</label>
+    <select id="region" name="region" required style="width:100%;">
+      <option value="">Seleccione la región...</option>
+      <option value="arica_parinacota">Región de Arica y Parinacota</option>
+      <option value="tarapaca">Región de Tarapacá</option>
+      <option value="antofagasta">Región de Antofagasta</option>
+      <option value="atacama">Región de Atacama</option>
+      <option value="coquimbo">Región de Coquimbo</option>
+      <option value="valparaiso">Región de Valparaíso</option>
+      <option value="ohiggins">Región del Libertador General Bernardo O'Higgins</option>
+      <option value="maule">Región del Maule</option>
+      <option value="nuble">Región de Ñuble</option>
+      <option value="biobio">Región del Biobío</option>
+      <option value="araucania">Región de La Araucanía</option>
+      <option value="los_rios">Región de Los Ríos</option>
+      <option value="los_lagos">Región de Los Lagos</option>
+      <option value="aysen">Región de Aysén</option>
+      <option value="magallanes">Región de Magallanes y de la Antártica Chilena</option>
+      <option value="metropolitana">Región Metropolitana de Santiago</option>
+    </select>
+  </div>
+
+  <div style="flex:1; min-width:180px;">
+    <label for="comuna" style="margin-bottom:5px;display:block;">Comuna</label>
+    <select id="comuna" name="comuna" required style="width:100%;">
+      <option value="">Seleccione la comuna...</option>
+
+  <optgroup label="Región de Arica y Parinacota">
+    <option value="arica">Arica</option>
+    <option value="camarones">Camarones</option>
+    <option value="putre">Putre</option>
+    <option value="general_lagos">General Lagos</option>
+  </optgroup>
+
+  <optgroup label="Región de Tarapacá">
+    <option value="iquique">Iquique</option>
+    <option value="alto_hospicio">Alto Hospicio</option>
+    <option value="pozo_almonte">Pozo Almonte</option>
+    <option value="camina">Camiña</option>
+    <option value="colchane">Colchane</option>
+    <option value="huara">Huara</option>
+    <option value="pica">Pica</option>
+  </optgroup>
+
+  <optgroup label="Región de Antofagasta">
+    <option value="antofagasta">Antofagasta</option>
+    <option value="mejillones">Mejillones</option>
+    <option value="sierra_gorda">Sierra Gorda</option>
+    <option value="taltal">Taltal</option>
+    <option value="calama">Calama</option>
+    <option value="ollague">Ollagüe</option>
+    <option value="san_pedro_de_atacama">San Pedro de Atacama</option>
+    <option value="tocopilla">Tocopilla</option>
+    <option value="maria_elena">María Elena</option>
+  </optgroup>
+
+  <optgroup label="Región de Atacama">
+    <option value="copiapo">Copiapó</option>
+    <option value="caldera">Caldera</option>
+    <option value="tierra_amarilla">Tierra Amarilla</option>
+    <option value="chanaral">Chañaral</option>
+    <option value="diego_de_almagro">Diego de Almagro</option>
+    <option value="vallenar">Vallenar</option>
+    <option value="alto_del_carmen">Alto del Carmen</option>
+    <option value="freirina">Freirina</option>
+    <option value="huasco">Huasco</option>
+  </optgroup>
+
+  <optgroup label="Región de Coquimbo">
+    <option value="la_serena">La Serena</option>
+    <option value="coquimbo">Coquimbo</option>
+    <option value="andacollo">Andacollo</option>
+    <option value="la_higuera">La Higuera</option>
+    <option value="paihuano">Paihuano</option>
+    <option value="vicuna">Vicuña</option>
+    <option value="illapel">Illapel</option>
+    <option value="canela">Canela</option>
+    <option value="los_vilos">Los Vilos</option>
+    <option value="salamanca">Salamanca</option>
+    <option value="ovalle">Ovalle</option>
+    <option value="combarbala">Combarbalá</option>
+    <option value="monte_patria">Monte Patria</option>
+    <option value="punitaqui">Punitaqui</option>
+    <option value="rio_hurtado">Río Hurtado</option>
+  </optgroup>
+
+  <optgroup label="Región de Valparaíso">
+    <option value="valparaiso">Valparaíso</option>
+    <option value="casablanca">Casablanca</option>
+    <option value="concon">Concón</option>
+    <option value="juan_fernandez">Juan Fernández</option>
+    <option value="puchuncavi">Puchuncaví</option>
+    <option value="quintero">Quintero</option>
+    <option value="vina_del_mar">Viña del Mar</option>
+    <option value="quilpue">Quilpué</option>
+    <option value="villa_alemana">Villa Alemana</option>
+    <option value="limache">Limache</option>
+    <option value="olmue">Olmué</option>
+    <option value="quillota">Quillota</option>
+    <option value="la_calera">La Calera</option>
+    <option value="hijuelas">Hijuelas</option>
+    <option value="nogales">Nogales</option>
+    <option value="la_cruz">La Cruz</option>
+    <option value="san_antonio">San Antonio</option>
+    <option value="cartagena">Cartagena</option>
+    <option value="el_quisco">El Quisco</option>
+    <option value="el_tabo">El Tabo</option>
+    <option value="algarrobo">Algarrobo</option>
+    <option value="santo_domingo">Santo Domingo</option>
+    <option value="san_felipe">San Felipe</option>
+    <option value="catemu">Catemu</option>
+    <option value="llaillay">Llaillay</option>
+    <option value="panquehue">Panquehue</option>
+    <option value="putaendo">Putaendo</option>
+    <option value="santa_maria">Santa María</option>
+    <option value="los_andes">Los Andes</option>
+    <option value="calle_larga">Calle Larga</option>
+    <option value="rinconada">Rinconada</option>
+    <option value="san_esteban">San Esteban</option>
+    <option value="isla_de_pascua">Isla de Pascua</option>
+  </optgroup>
+
+  <optgroup label="Región del Libertador General Bernardo O'Higgins">
+    <option value="rancagua">Rancagua</option>
+    <option value="machali">Machalí</option>
+    <option value="graneros">Graneros</option>
+    <option value="mostazal">Mostazal</option>
+    <option value="codegua">Codegua</option>
+    <option value="coinco">Coinco</option>
+    <option value="coltauco">Coltauco</option>
+    <option value="donihue">Doñihue</option>
+    <option value="olivar">Olivar</option>
+    <option value="peumo">Peumo</option>
+    <option value="pichidegua">Pichidegua</option>
+    <option value="quinta_de_tilcoco">Quinta de Tilcoco</option>
+    <option value="requinoa">Requínoa</option>
+    <option value="rengo">Rengo</option>
+    <option value="san_vicente_de_tagua_tagua">San Vicente de Tagua Tagua</option>
+    <option value="san_fernando">San Fernando</option>
+    <option value="chimbarongo">Chimbarongo</option>
+    <option value="nancagua">Nancagua</option>
+    <option value="placilla">Placilla</option>
+    <option value="santa_cruz">Santa Cruz</option>
+    <option value="lolol">Lolol</option>
+    <option value="palmilla">Palmilla</option>
+    <option value="peralillo">Peralillo</option>
+    <option value="pumanque">Pumanque</option>
+    <option value="chepica">Chépica</option>
+    <option value="litueche">Litueche</option>
+    <option value="navidad">Navidad</option>
+    <option value="pichilemu">Pichilemu</option>
+    <option value="la_estrella">La Estrella</option>
+    <option value="marchigue">Marchigüe</option>
+  </optgroup>
+
+  <optgroup label="Región del Maule">
+    <option value="talca">Talca</option>
+    <option value="constitucion">Constitución</option>
+    <option value="curepto">Curepto</option>
+    <option value="empedrado">Empedrado</option>
+    <option value="maule">Maule</option>
+    <option value="pencahue">Pencahue</option>
+    <option value="rio_claro">Río Claro</option>
+    <option value="san_clemente">San Clemente</option>
+    <option value="san_rafael">San Rafael</option>
+    <option value="curico">Curicó</option>
+    <option value="hualane">Hualañé</option>
+    <option value="licanten">Licantén</option>
+    <option value="molina">Molina</option>
+    <option value="rauco">Rauco</option>
+    <option value="romeral">Romeral</option>
+    <option value="sagrada_familia">Sagrada Familia</option>
+    <option value="teno">Teno</option>
+    <option value="vichuquen">Vichuquén</option>
+    <option value="linares">Linares</option>
+    <option value="colbun">Colbún</option>
+    <option value="longavi">Longaví</option>
+    <option value="parral">Parral</option>
+    <option value="retiro">Retiro</option>
+    <option value="san_javier">San Javier</option>
+    <option value="villa_alegre">Villa Alegre</option>
+    <option value="yerbas_buenas">Yerbas Buenas</option>
+    <option value="cauquenes">Cauquenes</option>
+    <option value="pelluhue">Pelluhue</option>
+    <option value="chanco">Chanco</option>
+  </optgroup>
+
+  <optgroup label="Región de Ñuble">
+    <option value="chillan">Chillán</option>
+    <option value="chillan_viejo">Chillán Viejo</option>
+    <option value="bulnes">Bulnes</option>
+    <option value="cobquecura">Cobquecura</option>
+    <option value="coelemu">Coelemu</option>
+    <option value="coihueco">Coihueco</option>
+    <option value="el_carmen">El Carmen</option>
+    <option value="ninhue">Ninhue</option>
+    <option value="niquen">Ñiquén</option>
+    <option value="portezuelo">Portezuelo</option>
+    <option value="pemuco">Pemuco</option>
+    <option value="quillon">Quillón</option>
+    <option value="quirihue">Quirihue</option>
+    <option value="ranquil">Ránquil</option>
+    <option value="san_carlos">San Carlos</option>
+    <option value="san_fabian">San Fabián</option>
+    <option value="san_ignacio">San Ignacio</option>
+    <option value="san_nicolas">San Nicolás</option>
+    <option value="trehuaco">Trehuaco</option>
+    <option value="yungay">Yungay</option>
+  </optgroup>
+
+  <optgroup label="Región del Biobío">
+    <option value="concepcion">Concepción</option>
+    <option value="coronel">Coronel</option>
+    <option value="chiguayante">Chiguayante</option>
+    <option value="florida">Florida</option>
+    <option value="hualpen">Hualpén</option>
+    <option value="hualqui">Hualqui</option>
+    <option value="lota">Lota</option>
+    <option value="penco">Penco</option>
+    <option value="san_pedro_de_la_paz">San Pedro de la Paz</option>
+    <option value="santa_juana">Santa Juana</option>
+    <option value="tome">Tomé</option>
+    <option value="arauco">Arauco</option>
+    <option value="canete">Cañete</option>
+    <option value="contulmo">Contulmo</option>
+    <option value="curanilahue">Curanilahue</option>
+    <option value="lebu">Lebu</option>
+    <option value="los_alamos">Los Álamos</option>
+    <option value="tirua">Tirúa</option>
+    <option value="angol">Angol</option>
+  </optgroup>
+
+  <optgroup label="Región de La Araucanía">
+    <option value="temuco">Temuco</option>
+    <option value="padre_las_casas">Padre Las Casas</option>
+    <option value="vilcun">Vilcún</option>
+    <option value="cunco">Cunco</option>
+    <option value="melipeuco">Melipeuco</option>
+    <option value="curacautin">Curacautín</option>
+    <option value="lonquimay">Lonquimay</option>
+    <option value="lautaro">Lautaro</option>
+    <option value="perquenco">Perquenco</option>
+    <option value="galvarino">Galvarino</option>
+    <option value="cholchol">Cholchol</option>
+    <option value="carahue">Carahue</option>
+    <option value="saavedra">Saavedra</option>
+    <option value="teodoro_schmidt">Teodoro Schmidt</option>
+    <option value="tolten">Toltén</option>
+    <option value="villarrica">Villarrica</option>
+    <option value="freire">Freire</option>
+    <option value="gorbea">Gorbea</option>
+    <option value="lanco">Lanco</option>
+    <option value="pitrufquen">Pitrufquén</option>
+    <option value="pucon">Pucón</option>
+  </optgroup>
+
+  <optgroup label="Región de Los Ríos">
+    <option value="valdivia">Valdivia</option>
+    <option value="corral">Corral</option>
+    <option value="lanco">Lanco</option>
+    <option value="los_lagos">Los Lagos</option>
+    <option value="mafil">Máfil</option>
+    <option value="mariquina">Mariquina</option>
+    <option value="paillaco">Paillaco</option>
+    <option value="panguipulli">Panguipulli</option>
+    <option value="la_union">La Unión</option>
+    <option value="futrono">Futrono</option>
+    <option value="lago_ranco">Lago Ranco</option>
+    <option value="rio_bueno">Río Bueno</option>
+  </optgroup>
+
+  <optgroup label="Región de Los Lagos">
+    <option value="ancud">Ancud</option>
+    <option value="puerto_montt">Puerto Montt</option>
+    <option value="dalcahue">Dalcahue</option>
+    <option value="puqueldon">Puqueldón</option>
+    <option value="queilen">Queilén</option>
+    <option value="quemchi">Quemchi</option>
+    <option value="quellon">Quellón</option>
+    <option value="quinchao">Quinchao</option>
+    <option value="calbuco">Calbuco</option>
+    <option value="cochamo">Cochamó</option>
+    <option value="chonchi">Chonchi</option>
+    <option value="curaco_de_velez">Curaco de Vélez</option>
+    <option value="fresia">Fresia</option>
+    <option value="frutillar">Frutillar</option>
+    <option value="llanquihue">Llanquihue</option>
+    <option value="maullin">Maullín</option>
+    <option value="los_muermos">Los Muermos</option>
+    <option value="puerto_varas">Puerto Varas</option>
+    <option value="castro">Castro</option>
+    <option value="osorno">Osorno</option>
+    <option value="puerto_octay">Puerto Octay</option>
+    <option value="rio_negro">Río Negro</option>
+    <option value="purranque">Purranque</option>
+    <option value="puyehue">Puyehue</option>
+    <option value="san_juan_de_la_costa">San Juan de la Costa</option>
+    <option value="san_pablo">San Pablo</option>
+  </optgroup>
+
+  <optgroup label="Región de Aysén del General Carlos Ibáñez del Campo">
+    <option value="coihaique">Coihaique</option>
+    <option value="cisnes">Cisnes</option>
+    <option value="guaitecas">Guaitecas</option>
+    <option value="cochrane">Cochrane</option>
+    <option value="aysen">Aysén</option>
+    <option value="rio_ibanez">Río Ibáñez</option>
+    <option value="tortel">Tortel</option>
+    <option value="gonzalo_cordova">Gonzalo Crovez</option>
+  </optgroup>
+
+  <optgroup label="Región de Magallanes y de la Antártica Chilena">
+    <option value="punta_arenas">Punta Arenas</option>
+    <option value="puerto_natales">Puerto Natales</option>
+    <option value="torres_del_paine">Torres del Paine</option>
+    <option value="porvenir">Porvenir</option>
+    <option value="primavera">Primavera</option>
+    <option value="timaukel">Timaukel</option>
+    <option value="cabo_de_hornos">Cabo de Hornos</option>
+    <option value="antartica_chilena">Antártica Chilena</option>
+  </optgroup>
+
+  <optgroup label="Región Metropolitana de Santiago">
+    <option value="santiago">Santiago</option>
+    <option value="cerrillos">Cerrillos</option>
+    <option value="cerro_navia">Cerro Navia</option>
+    <option value="conchali">Conchalí</option>
+    <option value="el_bosque">El Bosque</option>
+    <option value="estacion_central">Estación Central</option>
+    <option value=" huechuraba">Huechuraba</option>
+    <option value="independencia">Independencia</option>
+    <option value="la_cisterna">La Cisterna</option>
+    <option value="la_floresta">La Florida</option>
+    <option value="la_granja">La Granja</option>
+    <option value="la_pintana">La Pintana</option>
+    <option value="la_reina">La Reina</option>
+    <option value="las_condes">Las Condes</option>
+    <option value="lo_barnechea">Lo Barnechea</option>
+    <option value="lo_prado">Lo Prado</option>
+    <option value="macul">Macul</option>
+    <option value="maipu">Maipú</option>
+    <option value="nunoa">Ñuñoa</option>
+    <option value="padre_hurtado">Padre Hurtado</option>
+    <option value="pedro_aguirre">Pedro Aguirre Cerda</option>
+    <option value="penalolen">Peñalolén</option>
+    <option value="providencia">Providencia</option>
+    <option value="pudahuel">Pudahuel</option>
+    <option value="quilicura">Quilicura</option>
+    <option value="recoleta">Recoleta</option>
+    <option value="rinconada">Rinconada</option>
+    <option value="san_borja">San Borja</option>
+    <option value="san_jose_de_maipo">San José de Maipo</option>
+    <option value="san_miguel">San Miguel</option>
+    <option value="san_pedro">San Pedro</option>
+    <option value="san_ramon">San Ramón</option>
+    <option value="vitacura">Vitacura</option>
+    <option value="puente_alto">Puente Alto</option>
+  </optgroup>
+</select>
+  </div>
+</div>
+
+  <button type="submit" class="boton">Registrarse</button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Registro_usuario.js"></script>
+  <script src="carrito.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    actualizarContador();
+  });
+</script>
+</body>
+</html>

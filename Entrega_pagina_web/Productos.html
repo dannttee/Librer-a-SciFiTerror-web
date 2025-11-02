@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Productos | Librería SciFiTerror</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <div class="barra-superior">
+      <div class="logo">
+        <img src="logotienda.png" alt="Logo de la tienda Librería SciFiTerror" />
+        <span>Librería SciFiTerror</span>
+      </div>
+      <nav>
+        <a href="Index.html" title="Inicio">Home</a>
+        <a href="Productos.html" title="Catálogo de productos">Productos</a>
+        <a href="Nosotros.html" title="Acerca de nosotros">Nosotros</a>
+        <a href="Blogs.html" title="Blogs">Blogs</a>
+        <a href="Contacto.html" title="Contacto">Contacto</a>
+      </nav>
+      <div class="carrito" aria-label="Carrito de compras" role="region" tabindex="0">
+        <a href="Carrito.html" class="carrito-link">
+          <img src="carrito.png" alt="Icono carrito" class="carrito-icon" />
+          <span class="carrito-text">Carrito</span>
+          <span class="carrito-count">(<span id="cart-count">0</span>)</span>
+        </a>
+      </div>
+    </div>
+    <div class="auth-links" aria-label="Enlaces de autenticación">
+      <a href="Iniciar_sesion.html">Iniciar sesión</a> | <a href="Registro_usuario.html">Registrar usuario</a>
+    </div>
+  </header>
+  <main>
+    <h1 class="form-titulo">PRODUCTOS</h1>
+    <section class="listado-productos">
+      <div class="grid-productos" id="productos-lista">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-column" role="contentinfo">
+      <strong>Librería SciFiTerror</strong>
+      <nav aria-label="Categorías de libros" class="categorias">
+        <a href="#novelas" >Novelas</a>
+        <a href="#ciencia-ficcion" >Ciencia ficción</a>
+        <a href="#terror" >Terror</a>
+      </nav>
+      <div class="pagos" aria-label="Métodos de pago">
+        <img src="visa.png" alt="Visa" style="width:40px" />
+        <img src="mastercard.png" alt="Mastercard" style="width:40px" />
+        <img src="american express.png" alt="American Express" style="width:40px" />
+      </div>
+    </div>
+    <div class="footer-column">
+      <p>¡Manténgase en contacto! Suscríbase a nuestro boletín informativo.</p>
+      <form id="form-newsletter" aria-label="Formulario de suscripción al boletín">
+        <input
+          type="email"
+          name="email"
+          placeholder="Correo electrónico"
+          required
+          aria-required="true"
+          aria-label="Correo electrónico para suscripción"
+        />
+        <button type="submit">Suscribirse</button>
+      </form>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Productos.js" defer></script>
+  <script src="Carrito.js" defer></script>
+</body>
+</html>
