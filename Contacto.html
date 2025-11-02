@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contacto | Librería SciFiTerror</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <div class="barra-superior">
+      <div class="logo">
+        <img src="logotienda.png" alt="Logo de la tienda Librería SciFiTerror" />
+        <span>Librería SciFiTerror</span>
+      </div>
+      <nav>
+        <a href="Index.html" title="Inicio">Home</a>
+        <a href="Productos.html" title="Catálogo de productos">Productos</a>
+        <a href="Nosotros.html" title="Acerca de nosotros">Nosotros</a>
+        <a href="Blogs.html" title="Blogs">Blogs</a>
+        <a href="Contacto.html" title="Contacto">Contacto</a>
+      </nav>
+        <div class="carrito" aria-label="Carrito de compras" role="region" tabindex="0">
+          <a href="Carrito.html" class="carrito-link">
+            <img src="carrito.png" alt="Icono carrito" class="carrito-icon" />
+            <span class="carrito-text">Carrito</span>
+            <span class="carrito-count">(<span id="cart-count">0</span>)</span>
+          </a>
+        </div>
+    </div>
+    <div class="auth-links" aria-label="Enlaces de autenticación">
+      <a href="Iniciar_sesion.html">Iniciar sesión</a> | <a href="Registro_usuario.html">Registrar usuario</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="form-contenedor">
+      <div style="text-align:center; margin-bottom: 1.8rem;">
+        <img src="logotienda.png" alt="Logo Librería SciFiTerror" style="width:250px; height:auto; margin-bottom:0.5rem;" />
+        <div style="font-weight:700; font-size:1.4rem; color:#112d4e;">Librería SciFiTerror</div>
+      </div>
+
+      <div class="form-titulo">Contacto</div>
+      <form id="contactForm" novalidate>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required class="form-control" />
+        <div id="nombreError" class="invalid-feedback">Por favor ingresa tu nombre.</div>
+
+        <label for="correo" class="mt-3">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@gmail.com" required class="form-control" />
+        <div id="correoError" class="invalid-feedback">Por favor ingresa un correo válido con dominio @duoc.cl, @profesor.duoc.cl o @gmail.com.</div>
+
+        <label for="mensaje" class="mt-3">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí (mínimo 10 caracteres)" required class="form-control" rows="4"></textarea>
+        <div id="mensajeError" class="invalid-feedback">El mensaje es obligatorio y debe tener al menos 10 caracteres.</div>
+
+        <button type="submit" class="boton mt-4">Enviar</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Contacto.js"></script>
+  <script src="carrito.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    actualizarContador();
+  });
+</script>
+</body>
+</html>

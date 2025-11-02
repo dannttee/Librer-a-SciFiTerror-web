@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Librería SciFiTerror</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <div class="barra-superior">
+      <div class="logo">
+        <img src="logotienda.png" alt="Logo de la tienda Librería SciFiTerror" />
+        <span>Librería SciFiTerror</span>
+      </div>
+      <nav>
+        <a href="Index.html" title="Inicio">Home</a>
+        <a href="Productos.html" title="Catálogo de productos">Productos</a>
+        <a href="Nosotros.html" title="Acerca de nosotros">Nosotros</a>
+        <a href="Blogs.html" title="Blogs">Blogs</a>
+        <a href="Contacto.html" title="Contacto">Contacto</a>
+      </nav>
+        <div class="carrito" aria-label="Carrito de compras" role="region" tabindex="0">
+          <a href="Carrito.html" class="carrito-link">
+            <img src="carrito.png" alt="Icono carrito" class="carrito-icon" />
+            <span class="carrito-text">Carrito</span>
+            <span class="carrito-count">(<span id="cart-count">0</span>)</span>
+          </a>
+        </div>
+        <div id="bienvenidaUsuario" style="padding: 10px 15px; font-weight: bold; color: #333; display: none;"></div>
+    </div>
+    <div class="auth-links" aria-label="Enlaces de autenticación">
+      <a href="Iniciar_sesion.html">Iniciar sesión</a> | <a href="Registro_usuario.html">Registrar usuario</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="destacado" aria-labelledby="titulo-tienda">
+      <div class="info-tienda">
+        <h1 id="titulo-tienda">TIENDA DE LIBROS</h1>
+        <p>
+          Nuestra librería es experta en novelas, ciencia ficción y terror.<br />
+          Explora nuestro catálogo, compra y disfruta lecturas inolvidables.
+        </p>
+        <a href="productos.html" class="boton" aria-label="Ver productos en la tienda">
+          <span style="font-size:1.2em;">🛒</span> Ver productos
+        </a>
+      </div>
+      <div class="foto-tienda">
+        <img src="logotienda.png" alt="Interior de la librería SciFiTerror" style="max-width:350px;" />
+      </div>
+    </section>
+
+    <section class="listado-productos" aria-label="Listado de productos">
+      <div class="grid-productos">
+        <article class="producto">
+          <img src="DUNE.jpg" alt="Portada del libro Dune" />
+          <a href="producto_detalle.html?id=dune" class="titulo-producto">Dune</a>
+          <p class="atributos">Autor: Frank Herbert</p>
+          <p class="precio">$12.990</p>
+        </article>
+        <article class="producto">
+          <img src="FRANKENSTEIN.jpg" alt="Portada del libro Frankenstein" />
+          <a href="producto_detalle.html?id=frankenstein" class="titulo-producto">Frankenstein</a>
+          <p class="atributos">Autor: Mary Shelley</p>
+          <p class="precio">$10.500</p>
+        </article>
+        <article class="producto">
+          <img src="IT.jpg" alt="Portada del libro It" />
+          <a href="producto_detalle.html?id=it" class="titulo-producto">It</a>
+          <p class="atributos">Autor: Stephen King</p>
+          <p class="precio">$11.990</p>
+        </article>
+        <article class="producto">
+          <img src="NEUROMANTE.jpg" alt="Portada del libro Neuromante nº 01" />
+          <a href="producto_detalle.html?id=neuromante" class="titulo-producto">Neuromante nº 01</a>
+          <p class="atributos">Autor: William Gibson</p>
+          <p class="precio">$13.990</p>
+        </article>
+        <article class="producto">
+          <img src="El problema de los tres cuerpos.jpg" alt="Portada del libro El problema de los tres cuerpos" />
+          <a href="producto_detalle.html?id=problema-tres-cuerpos" class="titulo-producto">El problema de los tres cuerpos</a>
+          <p class="atributos">Autor: Cixin Liu</p>
+          <p class="precio">$14.990</p>
+        </article>
+        <article class="producto">
+          <img src="La llamada de Cthulhu.jpg" alt="Portada del libro La llamada de Cthulhu" />
+          <a href="producto_detalle.html?id=llamada-cthulhu" class="titulo-producto">La llamada de Cthulhu</a>
+          <p class="atributos">Autor: H.P. Lovecraft</p>
+          <p class="precio">$9.990</p>
+        </article>
+        <article class="producto">
+          <img src="1984.jpg" alt="Portada del libro 1984" />
+          <a href="producto_detalle.html?id=1984" class="titulo-producto">1984</a>
+          <p class="atributos">Autor: George Orwell</p>
+          <p class="precio">$10.990</p>
+        </article>
+        <article class="producto">
+          <img src="Crónicas Marcianas.jpg" alt="Portada del libro Crónicas Marcianas" />
+          <a href="producto_detalle.html?id=cronicas-marcianas" class="titulo-producto">Crónicas Marcianas</a>
+          <p class="atributos">Autor: Ray Bradbury</p>
+          <p class="precio">$12.500</p>
+        </article>
+        <article class="producto">
+          <img src="El Exorcista.jpg" alt="Portada del libro El Exorcista" />
+          <a href="producto_detalle.html?id=exorcista" class="titulo-producto">El Exorcista</a>
+          <p class="atributos">Autor: William Peter Blatty</p>
+          <p class="precio">$11.500</p>
+        </article>
+        <article class="producto">
+          <img src="La noche de los muertos vivientes.jpg" alt="Portada del libro La noche de los muertos vivientes" />
+          <a href="producto_detalle.html?id=noche-muertos-vivientes" class="titulo-producto">La noche de los muertos vivientes</a>
+          <p class="atributos">Autor: John Russo</p>
+          <p class="precio">$9.990</p>
+        </article>
+        <article class="producto">
+          <img src="La Sombra de la Noche.jpg" alt="Portada del libro La Sombra de la Noche / Shadow of Night" />
+          <a href="producto_detalle.html?id=sombra-noche" class="titulo-producto">La Sombra de la Noche / Shadow of Night</a>
+          <p class="atributos">Autor: Deborah Harkness</p>
+          <p class="precio">$13.500</p>
+        </article>
+        <article class="producto">
+          <img src="Hyperion.jpg" alt="Portada del libro Hyperion" />
+          <a href="producto_detalle.html?id=hyperion" class="titulo-producto">Hyperion</a>
+          <span class="atributos">Autor: Dan Simmons</span>
+          <span class="precio">$14.300</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-column" role="contentinfo">
+      <strong>Librería SciFiTerror</strong>
+      <nav aria-label="Categorías de libros" class="categorias">
+        <a href="#" title="Novelas">Categoria Novelas</a> |
+        <a href="#" title="Ciencia Ficción">Categoria Ciencia Ficción</a> |
+        <a href="#" title="Terror">Categoria Terror</a>
+      </nav>
+      <div class="pagos" aria-label="Métodos de pago">
+        <img src="visa.png" alt="Visa" style="width:40px" />
+        <img src="mastercard.png" alt="Mastercard" style="width:40px" />
+        <img src="american express.png" alt="American Express" style="width:40px" />
+      </div>
+    </div>
+    <div class="footer-column">
+      <p>¡Manténgase en contacto! Suscríbase a nuestro boletín informativo.</p>
+      <form id="form-newsletter" aria-label="Formulario de suscripción al boletín">
+        <input
+          type="email"
+          name="email"
+          placeholder="Correo electrónico"
+          required
+          aria-required="true"
+          aria-label="Correo electrónico para suscripción"
+        />
+        <button type="submit">Suscribirse</button>
+      </form>
+    </div>
+  </footer>
+ <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const nombreCompleto = localStorage.getItem("usuarioNombre");
+      const bienvenidaEl = document.getElementById("bienvenidaUsuario");
+      const authLinksEl = document.getElementById("authLinks");
+
+      if (nombreCompleto) {
+        const primerNombre = nombreCompleto.split(" ")[0];
+        bienvenidaEl.textContent = `Bienvenido ${primerNombre}`;
+        bienvenidaEl.style.display = "block";
+
+        // Ocultar enlaces de autenticación si está logueado
+        if(authLinksEl) {
+          authLinksEl.style.display = "none";
+        }
+      }
+    });
+  </script>
+  <script src="carrito.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    actualizarContador();
+  });
+</script>
+</body>
+</html>
