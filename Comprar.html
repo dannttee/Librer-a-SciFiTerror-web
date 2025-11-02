@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Librería SciFiTerror</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+    <div class="barra-superior">
+      <div class="logo">
+        <img src="logotienda.png" alt="Logo de la tienda Librería SciFiTerror" />
+        <span>Librería SciFiTerror</span>
+      </div>
+      <nav>
+        <a href="Index.html" title="Inicio">Home</a>
+        <a href="Categorias.html" title="Categorias">Categorías</a>
+        <a href="Ofertas.html" title="Ofertas">Ofertas</a>
+        <a href="Productos.html" title="Catálogo de productos">Productos</a>
+        <a href="Nosotros.html" title="Acerca de nosotros">Nosotros</a>
+        <a href="Blogs.html" title="Blogs">Blogs</a>
+        <a href="Contacto.html" title="Contacto">Contacto</a>
+      </nav>
+        <div class="carrito" aria-label="Carrito de compras" role="region" tabindex="0">
+          <a href="Carrito.html" class="carrito-link">
+            <img src="carrito.png" alt="Icono carrito" class="carrito-icon" />
+            <span class="carrito-text">Carrito</span>
+            <span class="carrito-count">(<span id="cart-count">0</span>)</span>
+          </a>
+        </div>
+        <div id="bienvenidaUsuario" style="padding: 10px 15px; font-weight: bold; color: #333; display: none;"></div>
+    </div>
+    <div class="auth-links" aria-label="Enlaces de autenticación">
+      <a href="Iniciar_sesion.html">Iniciar sesión</a> | <a href="Registro_usuario.html">Registrar usuario</a>
+    </div>
+  </header>
+
+    <!-- CONTENIDO CHECKOUT -->
+    <div class="checkout-container">
+        <div class="checkout-grid">
+            <!-- LADO IZQUIERDO: TABLA + RESUMEN -->
+            <div class="checkout-left">
+                <h2>Carrito de compra</h2>
+                <p class="checkout-subtitle">Completa la siguiente información</p>
+
+                <!-- TABLA PRODUCTOS -->
+                <table class="tabla-checkout">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-productos">
+                    </tbody>
+                </table>
+
+                <!-- CÓDIGO DESCUENTO -->
+                <div class="descuento-section">
+                    <input type="text" id="codigo-descuento" placeholder="Ingrese código de descuento" class="input-descuento">
+                    <button class="btn-aplicar" onclick="aplicarDescuento()">Aplicar</button>
+                </div>
+            </div>
+
+            <!-- LADO DERECHO: FORMULARIO + RESUMEN TOTAL -->
+            <div class="resumen-box">
+                <!-- RESUMEN TOTAL -->
+                <div class="resumen-box">
+                    <h3>Total</h3>
+                    <p class="total-price" id="total-display">$0</p>
+                </div>
+
+                <button type="button" class="btn-comprar-visible" onclick="scrollFormulario()">Comprar ahora $<span id="total-display-botton">0</span></button>
+
+                <!-- FORMULARIO -->
+                <form id="formCheckout" onsubmit="procesarCompra(event)">
+                    <h3>Información del cliente</h3>
+                    <p class="form-subtitle">Completa la siguiente información</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nombre*</label>
+                            <input type="text" id="nombre" placeholder="Juan" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Apellidos*</label>
+                            <input type="text" id="apellidos" placeholder="García" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Correo* <small style="color: #999;">(Dominio: @duoc.cl, @profesor.duoc.cl o @gmail.com)</small></label>
+                        <input type="email" id="email" placeholder="tu@duoc.cl" required>
+                    </div>
+
+                    <!-- DIRECCIÓN -->
+                    <h3 class="form-title">Dirección de entrega de los productos</h3>
+                    <p class="form-subtitle">Ingrese dirección de forma ordenada</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Calle*</label>
+                            <input type="text" id="calle" placeholder="Calle" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Departamento (opcional)</label>
+                            <input type="text" id="departamento" placeholder="Ej: 405">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div style="flex:1; min-width:180px;">
+                            <label for="region" style="margin-bottom:5px;display:block;">Región*</label>
+                            <select id="region" name="region" required style="width:100%;">
+                                <option value="">Seleccione la región...</option>
+                                <option value="arica_parinacota">Región de Arica y Parinacota</option>
+                                <option value="tarapaca">Región de Tarapacá</option>
+                                <option value="antofagasta">Región de Antofagasta</option>
+                                <option value="atacama">Región de Atacama</option>
+                                <option value="coquimbo">Región de Coquimbo</option>
+                                <option value="valparaiso">Región de Valparaíso</option>
+                                <option value="ohiggins">Región del Libertador General Bernardo O'Higgins</option>
+                                <option value="maule">Región del Maule</option>
+                                <option value="nuble">Región de Ñuble</option>
+                                <option value="biobio">Región del Biobío</option>
+                                <option value="araucania">Región de La Araucanía</option>
+                                <option value="los_rios">Región de Los Ríos</option>
+                                <option value="los_lagos">Región de Los Lagos</option>
+                                <option value="aysen">Región de Aysén</option>
+                                <option value="magallanes">Región de Magallanes y de la Antártica Chilena</option>
+                                <option value="metropolitana">Región Metropolitana de Santiago</option>
+                            </select>
+                        </div>
+
+                        <div style="flex:1; min-width:180px;">
+                            <label for="comuna" style="margin-bottom:5px;display:block;">Comuna*</label>
+                            <select id="comuna" name="comuna" required style="width:100%;">
+                                <option value="">Seleccione la comuna...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Indicaciones para la entrega (opcional)</label>
+                        <textarea id="indicaciones" placeholder="Ej: Entre calle, color del edificio, no tiene timbre..."></textarea>
+                    </div>
+
+                    <!-- BOTÓN PAGAR -->
+                    <button type="submit" class="btn-pagar-checkout">Pagar ahora $ <span id="total-pagar">0</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE ÉXITO -->
+    <div id="modalExito" class="modal">
+        <div class="modal-box">
+            <h2>✅ ¡Compra Exitosa!</h2>
+            <p id="mensajeExito"></p>
+            <button class="btn-pagar-checkout" onclick="volverAlCarrito()">Volver al Carrito</button>
+        </div>
+    </div>
+
+    <script src="Comprar.js"></script>
+</body>
+</html>
+
+
+

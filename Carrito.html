@@ -2,9 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Mi Carrito de Compras | Librería SciFiTerror</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Carrito de Compras - Librería SciFiTerror</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
@@ -16,43 +15,69 @@
       </div>
       <nav>
         <a href="Index.html" title="Inicio">Home</a>
+        <a href="Categorias.html" title="Categorias">Categorías</a>
+        <a href="Ofertas.html" title="Ofertas">Ofertas</a>
         <a href="Productos.html" title="Catálogo de productos">Productos</a>
         <a href="Nosotros.html" title="Acerca de nosotros">Nosotros</a>
         <a href="Blogs.html" title="Blogs">Blogs</a>
         <a href="Contacto.html" title="Contacto">Contacto</a>
       </nav>
-      <div class="carrito" aria-label="Carrito de compras" role="region" tabindex="0">
-        <a href="Carrito.html" class="carrito-link">
-          <img src="carrito.png" alt="Icono carrito" class="carrito-icon" />
-          <span class="carrito-text">Carrito</span>
-          <span class="carrito-count">(<span id="cart-count">0</span>)</span>
-        </a>
-      </div>
+        <div class="carrito" aria-label="Carrito de compras" role="region" tabindex="0">
+          <a href="Carrito.html" class="carrito-link">
+            <img src="carrito.png" alt="Icono carrito" class="carrito-icon" />
+            <span class="carrito-text">Carrito</span>
+            <span class="carrito-count">(<span id="cart-count">0</span>)</span>
+          </a>
+        </div>
+        <div id="bienvenidaUsuario" style="padding: 10px 15px; font-weight: bold; color: #333; display: none;"></div>
     </div>
     <div class="auth-links" aria-label="Enlaces de autenticación">
       <a href="Iniciar_sesion.html">Iniciar sesión</a> | <a href="Registro_usuario.html">Registrar usuario</a>
     </div>
   </header>
-  <main class="py-5">
-    <div class="container" style="max-width: 900px; margin: 0 auto;">
-      <h2 class="mb-4">Mi carrito de compras</h2>
-      <div class="d-flex flex-wrap gap-4 justify-content-center align-items-start">
-        <div id="cart-items-container" style="flex: 2 1 400px;">
-          <div id="carrito-lista"></div>
+
+  <main>
+    <section class="compra-layout">
+      <div class="compra-productos">
+        <h3>Lista de productos</h3>
+        <div class="productos-grid" id="productos-lista"></div>
+      </div>
+
+      <div class="carrito-compra-box">
+        <h3>Carrito de Compras</h3>
+        
+        <table class="carrito-tabla-compra">
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="carrito-lista"></tbody>
+        </table>
+
+        <div class="descuento-section">
+          <input type="text" id="coupon-code" class="input-descuento" placeholder="Ingrese código de descuento" />
+          <button id="apply-coupon" class="btn-aplicar-descuento">Aplicar</button>
         </div>
-        <div class="carrito-total-box">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <span class="fw-semibold fs-5">TOTAL:</span>
-            <span id="carrito-total" class="fs-4 fw-bold text-primary">$0</span>
-          </div>
-          <label for="coupon-code" class="form-label visually-hidden">Cupón de descuento</label>
-          <input type="text" id="coupon-code" class="form-control mb-2" placeholder="Ingrese código de descuento" />
-          <button id="apply-coupon" class="btn btn-outline-secondary w-100 mb-3" type="button">APLICAR</button>
-          <button id="checkout" class="btn btn-success w-100 btn-pagar" type="button">PAGAR</button>
+
+        <div class="total-row">
+          <strong>Total</strong>
+          <strong id="totalCarrito">$0</strong>
+        </div>
+
+        <div class="carrito-acciones">
+          <button class="btn-limpiar-carrito" id="limpiar-carrito">Limpiar</button>
+          <button class="btn-comprar-ahora" onclick="irACompra()">Comprar ahora</button>
         </div>
       </div>
-    </div>
+    </section>
   </main>
+
   <footer>
     <div class="footer-column" role="contentinfo">
       <strong>Librería SciFiTerror</strong>
@@ -83,7 +108,14 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="Carrito.js" defer></script>
+  <script src="Carrito.js"></script>
+<script>
+  // Cargar carrito al abrir la página
+  document.addEventListener("DOMContentLoaded", function() {
+    mostrarCarrito();
+    actualizarContador();
+  });
+</script>
 </body>
 </html>
+

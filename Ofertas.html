@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ofertas - Librería SciFiTerror</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- NAVEGACIÓN -->
+  <header>
+    <div class="barra-superior">
+      <div class="logo">
+        <img src="logotienda.png" alt="Logo de la tienda Librería SciFiTerror" />
+        <span>Librería SciFiTerror</span>
+      </div>
+      <nav>
+        <a href="Index.html" title="Inicio">Home</a>
+        <a href="Categorias.html" title="Categorias">Categorías</a>
+        <a href="Ofertas.html" title="Ofertas">Ofertas</a>
+        <a href="Productos.html" title="Catálogo de productos">Productos</a>
+        <a href="Nosotros.html" title="Acerca de nosotros">Nosotros</a>
+        <a href="Blogs.html" title="Blogs">Blogs</a>
+        <a href="Contacto.html" title="Contacto">Contacto</a>
+      </nav>
+        <div class="carrito" aria-label="Carrito de compras" role="region" tabindex="0">
+          <a href="Carrito.html" class="carrito-link">
+            <img src="carrito.png" alt="Icono carrito" class="carrito-icon" />
+            <span class="carrito-text">Carrito</span>
+            <span class="carrito-count">(<span id="cart-count">0</span>)</span>
+          </a>
+        </div>
+        <div id="bienvenidaUsuario" style="padding: 10px 15px; font-weight: bold; color: #333; display: none;"></div>
+    </div>
+    <div class="auth-links" aria-label="Enlaces de autenticación">
+      <a href="Iniciar_sesion.html">Iniciar sesión</a> | <a href="Registro_usuario.html">Registrar usuario</a>
+    </div>
+  </header>
+  <!-- SECCIÓN DE OFERTAS -->
+  <section class="ofertas-section">
+    <div class="container">
+      <h1>🎉 Ofertas Especiales</h1>
+      <p>Descuentos increíbles en nuestros libros de ciencia ficción y terror</p>
+      
+      <!-- GRID DE PRODUCTOS EN OFERTA -->
+      <div id="ofertas-grid"></div>
+
+      <!-- INFO ADICIONAL -->
+      <div class="info-ofertas">
+        <div class="info-box">
+          <h3>⏰ Vigencia de Ofertas</h3>
+          <p>Nuestras ofertas son válidas mientras dure el stock disponible. ¡No esperes más!</p>
+        </div>
+        <div class="info-box">
+          <h3>🎁 Combina Ofertas</h3>
+          <p>Compra 2 o más productos en oferta y obtén envío gratis a cualquier parte del país.</p>
+        </div>
+        <div class="info-box">
+          <h3>💳 Formas de Pago</h3>
+          <p>Aceptamos todas las tarjetas de crédito, débito y transferencia bancaria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Sobre Nosotros</h4>
+        <p>Librería especializada en ciencia ficción y terror. Tus historias favoritas en un lugar.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Enlaces Rápidos</h4>
+        <ul>
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="Productos.html">Productos</a></li>
+          <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Síguenos</h4>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Librería SciFiTerror. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="Ofertas.js"></script>
+</body>
+</html>

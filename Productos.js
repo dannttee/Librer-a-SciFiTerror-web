@@ -3,9 +3,11 @@ const productos = [
     id: 'dune',
     nombre: 'Dune',
     autor: 'Frank Herbert',
-    precio: 12990,
+    precio: 9092,
+    descuento: 30,  // ← SOLO AGREGUÉ ESTO
+    precioOriginal: 12990,  // ← SOLO AGREGUÉ ESTO
     categoria: "Ciencia ficción",
-    descripcion:'“Dune” es una epopeya de ciencia ficción que se desarrolla en el árido planeta Arrakis, vital por su especia Melange. Paul Atreides, heredero de una casa noble, se enfrenta a traiciones, profecías y al choque de culturas y religiones en una lucha titánica por el poder. Es un libro que explora política, ecología, religión, y el destino de la humanidad en un futuro lejano.',
+    descripcion:'"Dune" es una epopeya de ciencia ficción que se desarrolla en el árido planeta Arrakis, vital por su especia Melange. Paul Atreides, heredero de una casa noble, se enfrenta a traiciones, profecías y al choque de culturas y religiones en una lucha titánica por el poder. Es un libro que explora política, ecología, religión, y el destino de la humanidad en un futuro lejano.',
     img_delantera: 'DUNE.jpg',
     img_trasera: 'DUNE_back.jpg',
   },
@@ -24,10 +26,12 @@ const productos = [
     id: 'it',
     nombre: 'It',
     autor: 'Stephen King',
-    precio: 11990,
+    precio: 7793,
+    descuento: 35,  // ← SOLO AGREGUÉ ESTO
+    precioOriginal: 11990,  // ← SOLO AGREGUÉ ESTO
     categoria: "Terror",
     descripcion:
-      'En “It”, un grupo de amigos de la infancia se enfrenta a un mal ancestral que acecha el pueblo de Derry cada 27 años, manifestándose muchas veces como el payaso Pennywise. La novela alterna pasado y presente, profundizando en los miedos personales y colectivos, la fuerza de la amistad y el trauma.',
+      'En "It", un grupo de amigos de la infancia se enfrenta a un mal ancestral que acecha el pueblo de Derry cada 27 años, manifestándose muchas veces como el payaso Pennywise. La novela alterna pasado y presente, profundizando en los miedos personales y colectivos, la fuerza de la amistad y el trauma.',
     img_delantera: 'IT.jpg',
     img_trasera: 'IT_back.jpg',
   },
@@ -64,14 +68,16 @@ const productos = [
     img_delantera: 'La llamada de Cthulhu.jpg',
     img_trasera: 'La llamada de Cthulhu_back.jpg',
   },
-  {
+   {
     id: '1984',
     nombre: '1984',
     autor: 'George Orwell',
-    precio: 10990,
+    precio: 7692,
+    descuento: 30,  // ← SOLO AGREGUÉ ESTO
+    precioOriginal: 10990,  // ← SOLO AGREGUÉ ESTO
     categoria: "Novelas",
     descripcion:
-      '“1984” es una visión estremecedora de un Estado totalitario, donde la vigilancia constante del Gran Hermano y la manipulación del lenguaje y la memoria anulan la libertad individual. Winston Smith lucha por la verdad y la dignidad en medio de la opresión y la represión.',
+      '"1984" es una visión estremecedora de un Estado totalitario, donde la vigilancia constante del Gran Hermano y la manipulación del lenguaje y la memoria anulan la libertad individual. Winston Smith lucha por la verdad y la dignidad en medio de la opresión y la represión.',
     img_delantera: '1984.jpg',
     img_trasera: '1984_back.jpg',
   },

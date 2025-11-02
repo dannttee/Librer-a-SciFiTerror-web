@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Blogs | Librería SciFiTerror</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="estilos.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías - Librería SciFiTerror</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="Categorias.css">
 </head>
 <body>
-  <header>
+    <header>
     <div class="barra-superior">
       <div class="logo">
         <img src="logotienda.png" alt="Logo de la tienda Librería SciFiTerror" />
@@ -36,44 +37,41 @@
     </div>
   </header>
 
-
-  <main>
-    <h2 class="titulo-blogs" style="color:#112d4e">NOTICIAS IMPORTANTES</h2>
-
-    <!-- Caso curioso #1 -->
-    <section class="caso-blog">
-      <div class="caso-detalle">
-        <div class="caso-titulo">#1 CURIOSIDAD DE LA TIENDA</div>
-        <div class="caso-desc">
-          ¿Sabías que “El arte de asustar” fue el libro más vendido en Puente Alto durante Halloween? 
-          Nuestra librería reúne los autores más inquietantes del género terror y ciencia ficción. 
-          ¡Descubre qué llevó a este título al número uno!
+    <div class="container">
+        <div class="categories-header">
+            <h1>Categorías de Productos</h1>
+            <p>Descubre nuestras categorías de libros</p>
         </div>
-        <button class="caso-boton" onclick="location.href='blog1.html'">VER</button>
-      </div>
-      <div class="caso-imagen">
-        <img src="el arte de asustar.png" alt="Portada El arte de asustar" />
-      </div>
-    </section>
 
-    <!-- Caso curioso #2 -->
-    <section class="caso-blog">
-      <div class="caso-detalle">
-        <div class="caso-titulo">#2 CURIOSIDAD DE LA TIENDA</div>
-        <div class="caso-desc">
-          Nuestro club de lectura “SciFiTerror” ha reunido más de 100 fans en reuniones presenciales en Santiago.
-          La última sesión debatió sobre alienígenas y fantasmas en la literatura moderna. 
-          ¡Conoce los libros favoritos del grupo y cómo participar!
+        <div class="categories-grid">
+            <div class="category-card" onclick="filtrarCategoria('Ciencia ficción')">
+                <div class="category-icon">🚀</div>
+                <h3>Ciencia ficción</h3>
+                <p>Viajes espaciales y futuros imaginarios</p>
+            </div>
+
+            <div class="category-card" onclick="filtrarCategoria('Terror')">
+                <div class="category-icon">👻</div>
+                <h3>Terror</h3>
+                <p>Historias que helan la sangre</p>
+            </div>
+
+            <div class="category-card" onclick="filtrarCategoria('Novelas')">
+                <div class="category-icon">📖</div>
+                <h3>Novelas</h3>
+                <p>Obras literarias imprescindibles</p>
+            </div>
         </div>
-        <button class="caso-boton" onclick="location.href='blog2.html'">VER</button>
-      </div>
-      <div class="caso-imagen">
-        <img src="reunion.png" alt="Reunión club SciFiTerror" />
-      </div>
-    </section>
-  </main>
 
-  <footer>
+        <div class="selected-category">
+            <h2 id="categoryTitle">Selecciona una categoría</h2>
+            <div class="products-grid" id="productsContainer">
+                <!-- Los productos se cargarán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
     <div class="footer-column" role="contentinfo">
       <strong>Librería SciFiTerror</strong>
       <nav aria-label="Categorías de libros" class="categorias">
@@ -102,11 +100,7 @@
       </form>
     </div>
   </footer>
-  <script src="carrito.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    actualizarContador();
-  });
-</script>
+
+    <script src="Categorias.js"></script>
 </body>
 </html>

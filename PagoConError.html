@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Con Error - Librería SciFiTerror</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="PagoConError.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header error">
+            <div class="error-icon">❌</div>
+            <h1>Error en la compra</h1>
+            <p class="error-message">Lo sentimos, hubo un problema procesando tu compra</p>
+        </div>
+
+        <div class="section">
+            <h3>Información del cliente</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <label>Nombre:</label>
+                    <p id="clientName"></p>
+                </div>
+                <div class="info-item">
+                    <label>Apellido:</label>
+                    <p id="clientLastname"></p>
+                </div>
+                <div class="info-item full-width">
+                    <label>Correo:</label>
+                    <p id="clientEmail"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Dirección de entrega de los productos</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <label>Calle:</label>
+                    <p id="addressStreet"></p>
+                </div>
+                <div class="info-item">
+                    <label>Departamento:</label>
+                    <p id="addressApart"></p>
+                </div>
+                <div class="info-item">
+                    <label>Región:</label>
+                    <p id="addressRegion"></p>
+                </div>
+                <div class="info-item">
+                    <label>Comuna:</label>
+                    <p id="addressComuna"></p>
+                </div>
+                <div class="info-item full-width">
+                    <label>Indicaciones:</label>
+                    <p id="addressIndicaciones"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Productos</h3>
+            <table class="products-table">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="productsTable"></tbody>
+            </table>
+        </div>
+
+        <div class="error-section">
+            <h2>Razón del error:</h2>
+            <div class="error-details">
+                <p id="errorReason"></p>
+            </div>
+        </div>
+
+        <div class="buttons-container">
+            <button class="btn btn-reintentar" onclick="reintentar()">🔄 Reintentar compra</button>
+            <button class="btn btn-secondary" onclick="irAlCarrito()">Volver al carrito</button>
+            <button class="btn btn-tertiary" onclick="irAlInicio()">Volver al inicio</button>
+        </div>
+    </div>
+
+    <script src="PagoConError.js"></script>
+</body>
+</html>
+

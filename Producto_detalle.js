@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'dune',
       nombre: 'Dune',
       autor: 'Frank Herbert',
-      precio: '$12.990',
+      precio: '$9.092',
       descripcion: '“Dune” es una epopeya de ciencia ficción que se desarrolla en el árido planeta Arrakis, vital por su especia Melange. Paul Atreides, heredero de una casa noble, se enfrenta a traiciones, profecías y al choque de culturas y religiones en una lucha titánica por el poder. Es un libro que explora política, ecología, religión, y el destino de la humanidad en un futuro lejano.',
       img_delantera: 'DUNE.jpg',
       img_trasera: 'DUNE_back.jpg'
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'it',
       nombre: 'It',
       autor: 'Stephen King',
-      precio: '$11.990',
+      precio: '$7.793',
       descripcion: 'En “It”, un grupo de amigos de la infancia se enfrenta a un mal ancestral que acecha el pueblo de Derry cada 27 años, manifestándose muchas veces como el payaso Pennywise. La novela alterna pasado y presente, profundizando en los miedos personales y colectivos, la fuerza de la amistad y el trauma.',
       img_delantera: 'IT.jpg',
       img_trasera: 'IT_back.jpg'
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: '1984',
       nombre: '1984',
       autor: 'George Orwell',
-      precio: '$10.990',
+      precio: '$7.692',
       descripcion: '“1984” es una visión estremecedora de un Estado totalitario, donde la vigilancia constante del Gran Hermano y la manipulación del lenguaje y la memoria anulan la libertad individual. Winston Smith lucha por la verdad y la dignidad en medio de la opresión y la represión.',
       img_delantera: '1984.jpg',
       img_trasera: '1984_back.jpg'
